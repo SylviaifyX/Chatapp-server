@@ -13,7 +13,13 @@ const Message = require("./modal/message");
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "*" } });
+const io = new Server(server, {
+  cors: {
+    origin: "*", // Allow requests from all origins
+    methods: ["GET", "POST"], // Allowed HTTP methods
+  },
+  transports: ["websocket", "polling"], // Ensure fallback to polling
+});
 
 // Middleware
 app.use(cors());
