@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+
+# secret
+.env
+
+# Logs
+*.log
+
+# Build directories
+/dist
+/build
+
+# OS-specific files (macOS, Windows, etc.)
+.DS_Store
+Thumbs.db
